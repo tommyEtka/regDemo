@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html ng-app = 'population'>
+<head>
+    <title>Registration Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div ng-controller='UserAddController as add'>
+
+	<form ng-submit="processform()">
+	<h2>Hello! This is the registration form. Please enter your information below.</h2>
+			<table>
+			<tr> <td>First Name:</td> <td><input name="First Name" id="First Name" type="text" ng-model="user.firstName"></td></td></tr>
+			<tr> <td>Last Name:</td> <td><input name="Last Name" id="Last Name" type="text" ng-model="user.lastName"></td></tr>
+			<tr> <td>Address 1: </td> <td><input name="Address 1" id="Address 1" type="text" ng-model="user.addressOne"></td></tr>
+			<tr> <td>Address 2: </td> <td><input name="Address 2" id="Address 2" type="text" ng-model="user.addressTwo"></td></tr>
+			<tr> <td>City: </td> <td><input name="City" id="City" type="text" ng-model="user.city"></td></tr>
+			<tr> <td>State: </td> <td><input name="State" id="State" type="text" ng-model="user.state"></td></tr>
+			<tr> <td>Zip Code: </td> <td><input name="Zip Code" id="Zip Code" type="text" ng-model="user.zip"></td></tr>
+			<tr> <td>Country: </td> <td><input name="Country" id="Country" type="text" ng-model="user.country"></td></tr>
+			</table>
+			<input type="submit" value = "Register">
+			
+	</form>
+	 
+</div>
+ 
+ <a  href="/confirmation.html"><input type="submit" value = "User Report"></a> 
+
+
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+   <script type="text/javascript" src="controller.js"></script>
+</body>
+</html>
