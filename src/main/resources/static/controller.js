@@ -10,12 +10,13 @@
 					method: "GET",
 					url:"/users",
 					headers: {
-						'Content-Type' : 'application/json'
+						'Accept' : 'application/json'
 					}
-				}).then(function mySuccess(response) {
+				}).then(function mySuccess(response){
 					console.log("Success!");
 					//$window.location.href = "/users.html";
 					console.log(response.data);
+					{$scope.users = response.data};
 				}, function myError(response){
 					console.log("Fail!");
 					console.log(response);
