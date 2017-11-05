@@ -27,9 +27,9 @@ public class RegDemoController {
 	
 	//creates the user
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
-    public User create(@RequestBody User createThis){
-		userRepository.save(createThis);
-		return createThis;
+    public User create(@RequestBody User newUser){
+		userRepository.save(newUser);
+		return newUser;
 		//test
 		//public String index(@RequestParam(value="name", required=false, defaultValue="Thurman") String name, Model model) {
 		//model.addAttribute("name", name);
