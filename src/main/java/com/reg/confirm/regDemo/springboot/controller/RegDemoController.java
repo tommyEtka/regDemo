@@ -21,42 +21,19 @@ import com.reg.confirm.regDemo.springboot.data.User;
 
 @RestController
 public class RegDemoController {
-	
+
 	@Autowired
 	private UserRepository userRepository;
-	
-	//creates the user
+
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
-    public User create(@RequestBody User newUser){
+	public User create(@RequestBody User newUser) {
 		User savedUser = userRepository.save(newUser);
 		return savedUser;
-		//test
-		//public String index(@RequestParam(value="name", required=false, defaultValue="Thurman") String name, Model model) {
-		//model.addAttribute("name", name);
-		//model.addAttribute("home", home);
-		//return "Congrats! You've registered to the database! ";
-    }
-	//returns Collection of all users
+	}
+
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
-	public Iterable<User> get(){
+	public Iterable<User> get() {
 		return userRepository.findAll();
-		}
-	
-	 //test 3
-	//@RequestMapping(value = "/confirmation", method = RequestMethod.GET)
-		//public String index(@RequestParam(value="name", required=false, defaultValue="Thurman") String name, Model model) {
-		//model.addAttribute("name", name);
-		//model.addAttribute("home", home);
-		//return "Congrats! You've registered to the database!";
-	
-	
-	
-	//test 2
-	//public String home2(Locale locale, Model model) {
-		//logger.info("Welcome home! The client locale is {}.", locale);
-		//Date date = new Date();
-		//DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		//String formattedDate = dateFormat.format(date);
-		//model.addAttribute("serverTime", formattedDate);
-		//return "users";
+	}
+
 }
