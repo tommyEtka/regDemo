@@ -20,7 +20,7 @@ import com.reg.confirm.regDemo.repository.UserRepository;
 import com.reg.confirm.regDemo.springboot.data.User;
 
 @RestController
-public class RegDemoController {
+public class UserController {
 
 	@Autowired
 	private UserRepository userRepository;
